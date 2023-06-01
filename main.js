@@ -16,3 +16,18 @@ function changeFont() {
         displayText.appendChild(span);
     }
 }
+
+// change title!
+
+function changeTitle() {
+    const title = document.getElementById('title');
+    title.textContent = randomWord() + " " + randomWord() + " " + randomWord() + " " + randomWord();
+}
+
+function randomWord() {
+    const titleWords = ['Random', 'Text', 'Font', 'Generator'];
+    return titleWords[Math.floor(Math.random() * titleWords.length)];
+}
+
+// Change the title every 2 seconds
+setInterval(changeTitle, 2000);
